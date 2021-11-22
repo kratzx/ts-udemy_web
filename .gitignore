@@ -1,3 +1,7 @@
+# Custom ignores
+package-lock.json
+build
+
 # Logs
 logs
 *.log
