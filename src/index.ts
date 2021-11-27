@@ -1,16 +1,6 @@
-import { User } from './models/User';
+import { User } from './models/User'
 
-const user  = new User({ name: 'myname', age: 20});
-
-user.set({ name: 'newname' });
-
-user.on('change', () => {
-  console.log('Change #1');
-});
-user.on('change', () => {
-  console.log('Change #2');
-});
-
-user.on('save', () => {
-  console.log('Save was triggered');
-});
+const user = new User({ name: 'new record', age: 0 });
+user.events.on ('change', ()=> {
+  console.log('change!')
+}) 
